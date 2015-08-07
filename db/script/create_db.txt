@@ -1,0 +1,4 @@
+.mode csv
+.import "E0.csv" e0
+.mode columns
+update e0 set Date = 20 || substr(Date, 7) || "-" || substr(Date,4,2)  || "-" || substr(Date, 1,2) where 1;
